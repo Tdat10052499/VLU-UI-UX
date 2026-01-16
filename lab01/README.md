@@ -76,6 +76,8 @@ The entry point of the application featuring:
 - Icon-enhanced input fields
 - Smooth transition to dashboard after successful login
 
+<img width="3037" height="1655" alt="image" src="https://github.com/user-attachments/assets/1bba1ecd-72a7-4153-81d1-5ee1b7754a29" />
+
 ---
 
 #### 2. **Dashboard** (`#dashboard`)
@@ -113,6 +115,8 @@ The main control center displaying real-time energy metrics:
 - Interactive hover effects
 - Responsive grid layout
 
+<img width="1964" height="1656" alt="image" src="https://github.com/user-attachments/assets/d76758e9-0e84-4315-a786-d15405edc4d7" />
+
 ---
 
 #### 3. **Advanced Analytics** (`#analytics`)
@@ -140,6 +144,8 @@ Comprehensive analytics and insights page:
 - Peak hour indicators (low/medium/high)
 - AI-generated recommendations
 - Percentage-based cost analysis
+
+<img width="2385" height="1655" alt="image" src="https://github.com/user-attachments/assets/52a11e7f-c017-4572-9941-e5b9cab88863" />
 
 ---
 
@@ -177,6 +183,8 @@ System configuration and device management:
 - Settings persistence
 - Real-time configuration updates
 
+<img width="2363" height="1652" alt="image" src="https://github.com/user-attachments/assets/b2b14580-fe38-40e1-bfc8-635b992398cb" />
+
 ---
 
 #### 5. **Reports** (`#reports`)
@@ -201,6 +209,8 @@ Report generation and management system:
 - Report templates with time estimates
 - Recent reports history
 - Quick action buttons
+
+<img width="3033" height="1667" alt="image" src="https://github.com/user-attachments/assets/0700ca25-e4a6-4b90-a9b9-e10f077de7f4" />
 
 ---
 
@@ -240,6 +250,8 @@ User account management and preferences:
 - Multi-language switching
 - Real-time preference updates
 - Security settings management
+
+<img width="2477" height="1657" alt="image" src="https://github.com/user-attachments/assets/6119c05e-9ed1-44d0-80f9-eecceb6af2b9" />
 
 ---
 
@@ -533,7 +545,7 @@ Logout → Clear Session → Return to Login
 
 ---
 
-## 🎓 Learning Outcomes
+## Learning Outcomes
 
 This project demonstrates proficiency in:
 
@@ -583,7 +595,7 @@ Potential improvements for future versions:
 ---
 
 
-## 👨‍💻 Developer
+## Developer
 
 **Hồ Du Tuấn Đạt**  
 Student ID: 2374802010097  
@@ -592,7 +604,7 @@ January 2026
 
 ---
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - Van Lang University for the UI/UX Design course
 - Font Awesome for the comprehensive icon library

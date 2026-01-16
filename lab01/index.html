@@ -1,0 +1,1267 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMS Control - Energy Management System</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+    <!-- Login Page -->
+    <section class="login-page active" id="login">
+        <div class="login-container">
+            <div class="login-box">
+                <div class="login-header">
+                    <div class="login-logo">⚡</div>
+                    <h1 data-lang="login.title">Energy Management System</h1>
+                    <p data-lang="login.subtitle">Monitor and optimize your energy consumption</p>
+                </div>
+
+                <form class="login-form" id="loginForm">
+                    <div class="form-group">
+                        <label data-lang="login.email">Email Address</label>
+                        <input type="email" data-lang="login.email" placeholder="Enter your email" required>
+                        <i class="fas fa-envelope"></i>
+                    </div>
+
+                    <div class="form-group">
+                        <label data-lang="login.password">Password</label>
+                        <input type="password" data-lang="login.password" placeholder="Enter your password" required>
+                        <i class="fas fa-lock"></i>
+                    </div>
+
+                    <div class="form-options">
+                        <label class="remember-me">
+                            <input type="checkbox">
+                            <span data-lang="login.remember">Remember me</span>
+                        </label>
+                        <a href="#" class="forgot-password">Forgot password?</a>
+                    </div>
+
+                    <button type="submit" class="btn-login" data-lang="login.button">Login</button>
+                </form>
+
+                <div class="login-footer">
+                    <p>Don't have an account? <a href="#">Sign up here</a></p>
+                </div>
+            </div>
+
+            <div class="login-illustration">
+                <div class="illustration-content">
+                    <i class="fas fa-bolt"></i>
+                    <h2>Welcome Back</h2>
+                    <p>Manage your energy consumption efficiently</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Container -->
+    <div class="container" style="display: none;">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo-icon">⚡</div>
+                <div class="logo-text">VLU Energy</div>
+            </div>
+
+            <button class="sidebar-toggle" title="Toggle Sidebar">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+
+            <nav class="nav-menu">
+                <div class="nav-item active" data-page="dashboard" title="Dashboard">
+                    <div class="nav-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="nav-label" data-lang="sidebar.dashboard">Dashboard</div>
+                </div>
+                <div class="nav-item" data-page="analytics" title="Advanced Analytics">
+                    <div class="nav-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <div class="nav-label" data-lang="sidebar.analytics">Advanced Analytics</div>
+                </div>
+                <div class="nav-item" data-page="config" title="Configuration">
+                    <div class="nav-icon">
+                        <i class="fas fa-cog"></i>
+                    </div>
+                    <div class="nav-label" data-lang="sidebar.config">Configuration</div>
+                </div>
+                <div class="nav-item" data-page="reports" title="Reports">
+                    <div class="nav-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <div class="nav-label" data-lang="sidebar.reports">Reports</div>
+                </div>
+                <div class="nav-item" data-page="profile" title="Settings & Profile">
+                    <div class="nav-icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="nav-label" data-lang="sidebar.profile">Settings & Profile</div>
+                </div>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="logout-item" title="Logout">
+                    <div class="logout-icon">
+                        <i class="fas fa-sign-out-alt"></i>
+                    </div>
+                    <div class="logout-label" data-lang="sidebar.logout">Logout</div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content" id="mainContent">
+            <!-- Dashboard Page -->
+            <section class="page active" id="dashboard">
+                <header class="page-header">
+                    <div class="header-content">
+                        <div>
+                            <h2>👋 Hello, Liam Gallagher!</h2>
+                            <p>Here's your energy overview for today</p>
+                        </div>
+                        <div class="header-actions">
+                            <div class="date-display">
+                                <i class="fas fa-calendar"></i>
+                                <span id="currentDate">January 16, 2026</span>
+                            </div>
+                            <div class="time-display">
+                                <i class="fas fa-clock"></i>
+                                <span id="currentTime">10:45 AM</span>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+
+                <!-- Quick Stats Cards -->
+                <div class="quick-stats-grid">
+                    <div class="stat-card energy-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <div class="stat-details">
+                            <div class="stat-label" data-lang="dashboard.energy">Total Energy</div>
+                            <div class="stat-value">8,932.4 <span class="unit">kWh</span></div>
+                            <div class="stat-change positive">
+                                <i class="fas fa-arrow-up"></i> 12.8% vs yesterday
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="stat-card power-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-tachometer-alt"></i>
+                        </div>
+                        <div class="stat-details">
+                            <div class="stat-label" data-lang="dashboard.power">Current Power</div>
+                            <div class="stat-value">1,245.6 <span class="unit">kVA</span></div>
+                            <div class="stat-change positive">
+                                <i class="fas fa-arrow-up"></i> 5.2% increase
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="stat-card cost-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <div class="stat-details">
+                            <div class="stat-label" data-lang="dashboard.cost">Monthly Cost</div>
+                            <div class="stat-value">$1,246 <span class="unit">USD</span></div>
+                            <div class="stat-change negative">
+                                <i class="fas fa-arrow-up"></i> $142 higher
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="stat-card efficiency-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <div class="stat-details">
+                            <div class="stat-label" data-lang="dashboard.efficiency">Efficiency</div>
+                            <div class="stat-value">0.92 <span class="unit">PF</span></div>
+                            <div class="stat-change neutral">
+                                <i class="fas fa-check-circle"></i> Optimal
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main Content Grid -->
+                <div class="dashboard-grid">
+                    <!-- Left Column -->
+                    <div class="dashboard-left">
+                        <!-- Energy Chart -->
+                        <div class="dashboard-card chart-card-main">
+                            <div class="card-header-flex">
+                                <div>
+                                    <h3>Energy Consumption</h3>
+                                    <p class="card-subtitle">Real-time monitoring</p>
+                                </div>
+                                <div class="card-actions">
+                                    <select class="mini-select">
+                                        <option>Today</option>
+                                        <option>This Week</option>
+                                        <option>This Month</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="line-chart">
+                                <svg viewBox="0 0 600 250">
+                                    <defs>
+                                        <linearGradient id="areaGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                            <stop offset="0%" style="stop-color:#6ec969;stop-opacity:0.3" />
+                                            <stop offset="100%" style="stop-color:#6ec969;stop-opacity:0" />
+                                        </linearGradient>
+                                    </defs>
+                                    <!-- Grid lines -->
+                                    <line x1="50" y1="200" x2="550" y2="200" stroke="#e0e0e0" stroke-width="1"></line>
+                                    <line x1="50" y1="150" x2="550" y2="150" stroke="#e0e0e0" stroke-width="1"></line>
+                                    <line x1="50" y1="100" x2="550" y2="100" stroke="#e0e0e0" stroke-width="1"></line>
+                                    <line x1="50" y1="50" x2="550" y2="50" stroke="#e0e0e0" stroke-width="1"></line>
+                                    <!-- Demand line (dashed) -->
+                                    <line x1="50" y1="70" x2="550" y2="70" stroke="#e74c3c" stroke-width="2" stroke-dasharray="5,5"></line>
+                                    <!-- Actual demand area -->
+                                    <polygon points="50,180 100,160 150,140 200,130 250,120 300,100 350,110 400,130 450,150 500,140 550,170" fill="url(#areaGradient)"></polygon>
+                                    <!-- Actual demand line -->
+                                    <polyline points="50,180 100,160 150,140 200,130 250,120 300,100 350,110 400,130 450,150 500,140 550,170" stroke="#6ec969" stroke-width="3" fill="none"></polyline>
+                                    <!-- Data points -->
+                                    <circle cx="300" cy="100" r="6" fill="#2d5a3d"></circle>
+                                    <circle cx="450" cy="150" r="6" fill="#2d5a3d"></circle>
+                                </svg>
+                            </div>
+                            <div class="chart-footer">
+                                <div class="chart-legend-inline">
+                                    <div><span style="background: #6ec969;"></span> Actual Usage</div>
+                                    <div><span style="background: #e74c3c;"></span> Peak Limit</div>
+                                </div>
+                                <div class="chart-stats-inline">
+                                    <div class="stat-mini">
+                                        <div class="stat-mini-value">1,058 kW</div>
+                                        <div class="stat-mini-label">Average</div>
+                                    </div>
+                                    <div class="stat-mini">
+                                        <div class="stat-mini-value">1,350 kW</div>
+                                        <div class="stat-mini-label">Peak</div>
+                                    </div>
+                                    <div class="stat-mini">
+                                        <div class="stat-mini-value">88%</div>
+                                        <div class="stat-mini-label">Efficiency</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Device Status -->
+                        <div class="dashboard-card">
+                            <div class="card-header-flex">
+                                <div>
+                                    <h3>Active Devices</h3>
+                                    <p class="card-subtitle">3 devices online</p>
+                                </div>
+                                <button class="btn-icon" title="Refresh">
+                                    <i class="fas fa-sync-alt"></i>
+                                </button>
+                            </div>
+                            <div class="device-list">
+                                <div class="device-item">
+                                    <div class="device-info">
+                                        <div class="device-icon">
+                                            <i class="fas fa-building"></i>
+                                        </div>
+                                        <div class="device-details">
+                                            <div class="device-name">Main Building - Floor 1</div>
+                                            <div class="device-status">
+                                                <span class="status-dot active"></span>
+                                                <span>Online</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="device-metric">
+                                        <div class="device-value">2,400 kWh</div>
+                                        <div class="device-change positive">+8.3%</div>
+                                    </div>
+                                </div>
+
+                                <div class="device-item">
+                                    <div class="device-info">
+                                        <div class="device-icon">
+                                            <i class="fas fa-industry"></i>
+                                        </div>
+                                        <div class="device-details">
+                                            <div class="device-name">Manufacturing Unit</div>
+                                            <div class="device-status">
+                                                <span class="status-dot active"></span>
+                                                <span>Online</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="device-metric">
+                                        <div class="device-value">4,567 kWh</div>
+                                        <div class="device-change positive">+15.2%</div>
+                                    </div>
+                                </div>
+
+                                <div class="device-item">
+                                    <div class="device-info">
+                                        <div class="device-icon">
+                                            <i class="fas fa-briefcase"></i>
+                                        </div>
+                                        <div class="device-details">
+                                            <div class="device-name">Office Block A</div>
+                                            <div class="device-status">
+                                                <span class="status-dot active"></span>
+                                                <span>Online</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="device-metric">
+                                        <div class="device-value">1,890 kWh</div>
+                                        <div class="device-change negative">-2.1%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column -->
+                    <div class="dashboard-right">
+                        <!-- Distribution Chart -->
+                        <div class="dashboard-card">
+                            <div class="card-header-flex">
+                                <div>
+                                    <h3>Energy Distribution</h3>
+                                    <p class="card-subtitle">By location</p>
+                                </div>
+                            </div>
+                            <div class="pie-chart-wrapper">
+                                <div class="pie-chart">
+                                    <svg viewBox="0 0 200 200">
+                                        <circle cx="100" cy="100" r="80" fill="none" stroke="#6ec969" stroke-width="35" stroke-dasharray="180 283" stroke-dashoffset="0"></circle>
+                                        <circle cx="100" cy="100" r="80" fill="none" stroke="#4aa051" stroke-width="35" stroke-dasharray="110 283" stroke-dashoffset="-180"></circle>
+                                        <circle cx="100" cy="100" r="80" fill="none" stroke="#2d5a3d" stroke-width="35" stroke-dasharray="50 283" stroke-dashoffset="-290"></circle>
+                                        <circle cx="100" cy="100" r="55" fill="white"></circle>
+                                    </svg>
+                                    <div class="chart-center">
+                                        <div class="chart-value">15,417</div>
+                                        <div class="chart-label">Total kWh</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pie-legend">
+                                <div class="legend-item">
+                                    <span class="legend-dot" style="background: #6ec969;"></span>
+                                    <span class="legend-label">Main Building</span>
+                                    <span class="legend-value">51%</span>
+                                </div>
+                                <div class="legend-item">
+                                    <span class="legend-dot" style="background: #4aa051;"></span>
+                                    <span class="legend-label">Manufacturing</span>
+                                    <span class="legend-value">32%</span>
+                                </div>
+                                <div class="legend-item">
+                                    <span class="legend-dot" style="background: #2d5a3d;"></span>
+                                    <span class="legend-label">Office Block</span>
+                                    <span class="legend-value">17%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Alerts -->
+                        <div class="dashboard-card alerts-card">
+                            <div class="card-header-flex">
+                                <div>
+                                    <h3>Alerts & Notifications</h3>
+                                    <p class="card-subtitle">2 new alerts</p>
+                                </div>
+                            </div>
+                            <div class="alerts-list">
+                                <div class="alert-item warning">
+                                    <div class="alert-icon">
+                                        <i class="fas fa-exclamation-triangle"></i>
+                                    </div>
+                                    <div class="alert-content">
+                                        <div class="alert-title">High Consumption Alert</div>
+                                        <div class="alert-time">5 minutes ago</div>
+                                    </div>
+                                </div>
+                                <div class="alert-item info">
+                                    <div class="alert-icon">
+                                        <i class="fas fa-info-circle"></i>
+                                    </div>
+                                    <div class="alert-content">
+                                        <div class="alert-title">Peak Hour Starting</div>
+                                        <div class="alert-time">15 minutes ago</div>
+                                    </div>
+                                </div>
+                                <div class="alert-item success">
+                                    <div class="alert-icon">
+                                        <i class="fas fa-check-circle"></i>
+                                    </div>
+                                    <div class="alert-content">
+                                        <div class="alert-title">Efficiency Target Met</div>
+                                        <div class="alert-time">1 hour ago</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Actions Section -->
+                <div class="quick-actions-section">
+                    <div class="quick-actions-container">
+                        <button class="quick-action-btn">
+                            <i class="fas fa-file-download"></i>
+                            <span>Export Data</span>
+                        </button>
+                        <button class="quick-action-btn">
+                            <i class="fas fa-chart-line"></i>
+                            <span>View Reports</span>
+                        </button>
+                        <button class="quick-action-btn">
+                            <i class="fas fa-cog"></i>
+                            <span>Settings</span>
+                        </button>
+                        <button class="quick-action-btn">
+                            <i class="fas fa-bell"></i>
+                            <span>Manage Alerts</span>
+                        </button>
+                    </div>
+                </div>
+
+
+            </section>
+
+            <!-- Analytics Page -->
+            <section class="page" id="analytics">
+                <header class="page-header">
+                    <div class="header-content">
+                        <div>
+                            <h2>Advanced Analytics</h2>
+                            <p>In-depth energy analysis and insights</p>
+                        </div>
+                        <div class="header-actions">
+                            <select class="mini-select">
+                                <option>Last 7 Days</option>
+                                <option>Last 30 Days</option>
+                                <option>Last 3 Months</option>
+                            </select>
+                            <button class="btn-icon" title="Export">
+                                <i class="fas fa-download"></i>
+                            </button>
+                        </div>
+                    </div>
+                </header>
+
+                <!-- Environmental Impact Cards -->
+                <div class="analytics-metrics">
+                    <div class="analytics-card green">
+                        <div class="analytics-icon">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <div class="analytics-content">
+                            <div class="analytics-label">Total CO₂ Emissions</div>
+                            <div class="analytics-value">993.6 <span class="unit">kg CO₂</span></div>
+                            <div class="analytics-trend positive">
+                                <i class="fas fa-arrow-down"></i> 15% reduction vs last month
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="analytics-card blue">
+                        <div class="analytics-icon">
+                            <i class="fas fa-wind"></i>
+                        </div>
+                        <div class="analytics-content">
+                            <div class="analytics-label">Average per Hour</div>
+                            <div class="analytics-value">41.4 <span class="unit">kg CO₂/hr</span></div>
+                            <div class="analytics-trend positive">
+                                <i class="fas fa-arrow-down"></i> Below target
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="analytics-card yellow">
+                        <div class="analytics-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <div class="analytics-content">
+                            <div class="analytics-label">Trees Needed</div>
+                            <div class="analytics-value">45 <span class="unit">trees/year</span></div>
+                            <div class="analytics-trend neutral">
+                                <i class="fas fa-info-circle"></i> To offset emissions
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="analytics-card orange">
+                        <div class="analytics-icon">
+                            <i class="fas fa-tachometer-alt"></i>
+                        </div>
+                        <div class="analytics-content">
+                            <div class="analytics-label">Carbon Intensity</div>
+                            <div class="analytics-value">0.82 <span class="unit">kg/kWh</span></div>
+                            <div class="analytics-trend neutral">
+                                <i class="fas fa-minus"></i> Industry average
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Analytics Grid -->
+                <div class="analytics-grid">
+                    <!-- Left Column -->
+                    <div class="analytics-left">
+                        <!-- Consumption Trends -->
+                        <div class="dashboard-card">
+                            <div class="card-header-flex">
+                                <div>
+                                    <h3>Energy Consumption Trends</h3>
+                                    <p class="card-subtitle">Monthly comparison</p>
+                                </div>
+                                <select class="mini-select">
+                                    <option>This Year</option>
+                                    <option>Last Year</option>
+                                </select>
+                            </div>
+                            <div class="bar-chart">
+                                <div class="bar-chart-container">
+                                    <div class="bar-item">
+                                        <div class="bar" style="height: 70%;"></div>
+                                        <div class="bar-label">Jan</div>
+                                    </div>
+                                    <div class="bar-item">
+                                        <div class="bar" style="height: 85%;"></div>
+                                        <div class="bar-label">Feb</div>
+                                    </div>
+                                    <div class="bar-item">
+                                        <div class="bar" style="height: 65%;"></div>
+                                        <div class="bar-label">Mar</div>
+                                    </div>
+                                    <div class="bar-item">
+                                        <div class="bar" style="height: 90%;"></div>
+                                        <div class="bar-label">Apr</div>
+                                    </div>
+                                    <div class="bar-item">
+                                        <div class="bar" style="height: 75%;"></div>
+                                        <div class="bar-label">May</div>
+                                    </div>
+                                    <div class="bar-item">
+                                        <div class="bar" style="height: 95%;"></div>
+                                        <div class="bar-label">Jun</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Peak Hours Analysis -->
+                        <div class="dashboard-card">
+                            <div class="card-header-flex">
+                                <div>
+                                    <h3>Peak Hours Analysis</h3>
+                                    <p class="card-subtitle">Average consumption by hour</p>
+                                </div>
+                            </div>
+                            <div class="peak-hours-grid">
+                                <div class="hour-item low">
+                                    <div class="hour-time">00:00</div>
+                                    <div class="hour-bar"></div>
+                                    <div class="hour-value">245 kW</div>
+                                </div>
+                                <div class="hour-item low">
+                                    <div class="hour-time">04:00</div>
+                                    <div class="hour-bar"></div>
+                                    <div class="hour-value">198 kW</div>
+                                </div>
+                                <div class="hour-item medium">
+                                    <div class="hour-time">08:00</div>
+                                    <div class="hour-bar"></div>
+                                    <div class="hour-value">876 kW</div>
+                                </div>
+                                <div class="hour-item high">
+                                    <div class="hour-time">12:00</div>
+                                    <div class="hour-bar"></div>
+                                    <div class="hour-value">1,245 kW</div>
+                                </div>
+                                <div class="hour-item high">
+                                    <div class="hour-time">16:00</div>
+                                    <div class="hour-bar"></div>
+                                    <div class="hour-value">1,156 kW</div>
+                                </div>
+                                <div class="hour-item medium">
+                                    <div class="hour-time">20:00</div>
+                                    <div class="hour-bar"></div>
+                                    <div class="hour-value">654 kW</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column -->
+                    <div class="analytics-right">
+                        <!-- Insights Card -->
+                        <div class="dashboard-card insights-card">
+                            <div class="card-header-flex">
+                                <div>
+                                    <h3>Key Insights</h3>
+                                    <p class="card-subtitle">AI-powered recommendations</p>
+                                </div>
+                            </div>
+                            <div class="insights-list">
+                                <div class="insight-item success">
+                                    <div class="insight-icon">
+                                        <i class="fas fa-check-circle"></i>
+                                    </div>
+                                    <div class="insight-content">
+                                        <div class="insight-title">Efficiency Improved</div>
+                                        <div class="insight-text">20% reduction in peak hours achieved</div>
+                                    </div>
+                                </div>
+                                <div class="insight-item warning">
+                                    <div class="insight-icon">
+                                        <i class="fas fa-exclamation-triangle"></i>
+                                    </div>
+                                    <div class="insight-content">
+                                        <div class="insight-title">High Usage Detected</div>
+                                        <div class="insight-text">Consider load balancing during 12-4 PM</div>
+                                    </div>
+                                </div>
+                                <div class="insight-item info">
+                                    <div class="insight-icon">
+                                        <i class="fas fa-lightbulb"></i>
+                                    </div>
+                                    <div class="insight-content">
+                                        <div class="insight-title">Optimization Opportunity</div>
+                                        <div class="insight-text">Shift non-critical loads to off-peak hours</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Cost Analysis -->
+                        <div class="dashboard-card">
+                            <div class="card-header-flex">
+                                <div>
+                                    <h3>Cost Breakdown</h3>
+                                    <p class="card-subtitle">This month</p>
+                                </div>
+                            </div>
+                            <div class="cost-breakdown">
+                                <div class="cost-item">
+                                    <div class="cost-label">Energy Charges</div>
+                                    <div class="cost-value">$8,456</div>
+                                    <div class="cost-percent">68%</div>
+                                </div>
+                                <div class="cost-item">
+                                    <div class="cost-label">Demand Charges</div>
+                                    <div class="cost-value">$2,890</div>
+                                    <div class="cost-percent">23%</div>
+                                </div>
+                                <div class="cost-item">
+                                    <div class="cost-label">Fixed Charges</div>
+                                    <div class="cost-value">$1,120</div>
+                                    <div class="cost-percent">9%</div>
+                                </div>
+                                <div class="cost-total">
+                                    <div class="cost-label">Total Cost</div>
+                                    <div class="cost-value">$12,466</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Configuration Page -->
+            <section class="page" id="config">
+                <header class="page-header">
+                    <div class="header-content">
+                        <div>
+                            <h2>Configuration</h2>
+                            <p>System settings and device configuration</p>
+                        </div>
+                    </div>
+                </header>
+
+                <!-- Configuration Tabs -->
+                <div class="config-tabs">
+                    <button class="config-tab active" data-tab="devices">
+                        <i class="fas fa-server"></i>
+                        <span>Devices</span>
+                    </button>
+                    <button class="config-tab" data-tab="alerts">
+                        <i class="fas fa-bell"></i>
+                        <span>Alerts</span>
+                    </button>
+                    <button class="config-tab" data-tab="thresholds">
+                        <i class="fas fa-sliders-h"></i>
+                        <span>Thresholds</span>
+                    </button>
+                    <button class="config-tab" data-tab="system">
+                        <i class="fas fa-cog"></i>
+                        <span>System</span>
+                    </button>
+                </div>
+
+                <!-- Configuration Content -->
+                <div class="config-content">
+                    <!-- Device Settings -->
+                    <div class="dashboard-card">
+                        <div class="card-header-flex">
+                            <div>
+                                <h3>Device Configuration</h3>
+                                <p class="card-subtitle">Manage connected devices</p>
+                            </div>
+                            <button class="btn-primary-small">
+                                <i class="fas fa-plus"></i> Add Device
+                            </button>
+                        </div>
+                        <div class="device-config-list">
+                            <div class="device-config-item">
+                                <div class="device-config-info">
+                                    <div class="device-config-icon">
+                                        <i class="fas fa-building"></i>
+                                    </div>
+                                    <div class="device-config-details">
+                                        <div class="device-config-name">Main Building - Floor 1</div>
+                                        <div class="device-config-status">
+                                            <span class="status-dot active"></span>
+                                            <span>Online • Last sync: 2 mins ago</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="device-config-actions">
+                                    <button class="btn-icon-small" title="Edit">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                    <button class="btn-icon-small" title="Settings">
+                                        <i class="fas fa-cog"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="device-config-item">
+                                <div class="device-config-info">
+                                    <div class="device-config-icon">
+                                        <i class="fas fa-industry"></i>
+                                    </div>
+                                    <div class="device-config-details">
+                                        <div class="device-config-name">Manufacturing Unit</div>
+                                        <div class="device-config-status">
+                                            <span class="status-dot active"></span>
+                                            <span>Online • Last sync: 5 mins ago</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="device-config-actions">
+                                    <button class="btn-icon-small" title="Edit">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                    <button class="btn-icon-small" title="Settings">
+                                        <i class="fas fa-cog"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="device-config-item">
+                                <div class="device-config-info">
+                                    <div class="device-config-icon">
+                                        <i class="fas fa-briefcase"></i>
+                                    </div>
+                                    <div class="device-config-details">
+                                        <div class="device-config-name">Office Block A</div>
+                                        <div class="device-config-status">
+                                            <span class="status-dot active"></span>
+                                            <span>Online • Last sync: 1 min ago</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="device-config-actions">
+                                    <button class="btn-icon-small" title="Edit">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                    <button class="btn-icon-small" title="Settings">
+                                        <i class="fas fa-cog"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Settings Grid -->
+                    <div class="settings-grid">
+                        <div class="dashboard-card">
+                            <div class="card-header-flex">
+                                <div>
+                                    <h3>Alert Preferences</h3>
+                                    <p class="card-subtitle">Configure notification triggers</p>
+                                </div>
+                            </div>
+                            <div class="settings-list">
+                                <div class="setting-item">
+                                    <div class="setting-info">
+                                        <div class="setting-label">High Consumption Alert</div>
+                                        <div class="setting-desc">Notify when usage exceeds threshold</div>
+                                    </div>
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" checked>
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+                                <div class="setting-item">
+                                    <div class="setting-info">
+                                        <div class="setting-label">Device Offline Alert</div>
+                                        <div class="setting-desc">Alert when device goes offline</div>
+                                    </div>
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" checked>
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+                                <div class="setting-item">
+                                    <div class="setting-info">
+                                        <div class="setting-label">Anomaly Detection</div>
+                                        <div class="setting-desc">AI-powered unusual pattern detection</div>
+                                    </div>
+                                    <label class="toggle-switch">
+                                        <input type="checkbox">
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+                                <div class="setting-item">
+                                    <div class="setting-info">
+                                        <div class="setting-label">Cost Threshold Alert</div>
+                                        <div class="setting-desc">Notify when daily cost exceeds budget</div>
+                                    </div>
+                                    <label class="toggle-switch">
+                                        <input type="checkbox">
+                                        <span class="toggle-slider"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dashboard-card">
+                            <div class="card-header-flex">
+                                <div>
+                                    <h3>System Settings</h3>
+                                    <p class="card-subtitle">General configuration</p>
+                                </div>
+                            </div>
+                            <div class="form-grid">
+                                <div class="form-group-config">
+                                    <label>Update Frequency</label>
+                                    <select>
+                                        <option>30 seconds</option>
+                                        <option>1 minute</option>
+                                        <option>5 minutes</option>
+                                    </select>
+                                </div>
+                                <div class="form-group-config">
+                                    <label>Data Retention</label>
+                                    <select>
+                                        <option>30 days</option>
+                                        <option>90 days</option>
+                                        <option>1 year</option>
+                                    </select>
+                                </div>
+                                <div class="form-group-config">
+                                    <label>Time Zone</label>
+                                    <select>
+                                        <option>UTC +7 (Bangkok)</option>
+                                        <option>UTC +0 (London)</option>
+                                        <option>UTC -5 (New York)</option>
+                                    </select>
+                                </div>
+                                <div class="form-group-config">
+                                    <label>Date Format</label>
+                                    <select>
+                                        <option>DD/MM/YYYY</option>
+                                        <option>MM/DD/YYYY</option>
+                                        <option>YYYY-MM-DD</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <button class="btn-primary-full">Save Changes</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Reports Page -->
+            <section class="page" id="reports">
+                <header class="page-header">
+                    <div class="header-content">
+                        <div>
+                            <h2>Reports</h2>
+                            <p>Generate and view energy reports</p>
+                        </div>
+                        <button class="btn-primary-small">
+                            <i class="fas fa-history"></i> View History
+                        </button>
+                    </div>
+                </header>
+
+                <!-- Report Templates -->
+                <div class="report-templates">
+                    <div class="report-template-card">
+                        <div class="report-template-icon blue">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <div class="report-template-content">
+                            <h3>Daily Summary</h3>
+                            <p>Energy consumption and cost summary for each day</p>
+                            <div class="report-template-meta">
+                                <span><i class="fas fa-clock"></i> ~2 mins</span>
+                                <span><i class="fas fa-file-pdf"></i> PDF</span>
+                            </div>
+                        </div>
+                        <button class="btn-generate-report">
+                            <i class="fas fa-play"></i> Generate
+                        </button>
+                    </div>
+
+                    <div class="report-template-card">
+                        <div class="report-template-icon green">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="report-template-content">
+                            <h3>Monthly Analysis</h3>
+                            <p>Comprehensive monthly trends, peak hours, and savings potential</p>
+                            <div class="report-template-meta">
+                                <span><i class="fas fa-clock"></i> ~5 mins</span>
+                                <span><i class="fas fa-file-excel"></i> Excel</span>
+                            </div>
+                        </div>
+                        <button class="btn-generate-report">
+                            <i class="fas fa-play"></i> Generate
+                        </button>
+                    </div>
+
+                    <div class="report-template-card">
+                        <div class="report-template-icon orange">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <div class="report-template-content">
+                            <h3>Environmental Impact</h3>
+                            <p>CO₂ emissions, carbon footprint, and environmental metrics</p>
+                            <div class="report-template-meta">
+                                <span><i class="fas fa-clock"></i> ~3 mins</span>
+                                <span><i class="fas fa-file-pdf"></i> PDF</span>
+                            </div>
+                        </div>
+                        <button class="btn-generate-report">
+                            <i class="fas fa-play"></i> Generate
+                        </button>
+                    </div>
+
+                    <div class="report-template-card">
+                        <div class="report-template-icon purple">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <div class="report-template-content">
+                            <h3>Device Performance</h3>
+                            <p>Individual device efficiency, uptime, and status report</p>
+                            <div class="report-template-meta">
+                                <span><i class="fas fa-clock"></i> ~4 mins</span>
+                                <span><i class="fas fa-file-pdf"></i> PDF</span>
+                            </div>
+                        </div>
+                        <button class="btn-generate-report">
+                            <i class="fas fa-play"></i> Generate
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Recent Reports -->
+                <div class="dashboard-card">
+                    <div class="card-header-flex">
+                        <div>
+                            <h3>Recent Reports</h3>
+                            <p class="card-subtitle">Last 7 days</p>
+                        </div>
+                        <button class="btn-icon" title="Refresh">
+                            <i class="fas fa-sync-alt"></i>
+                        </button>
+                    </div>
+                    <div class="recent-reports-list">
+                        <div class="recent-report-item">
+                            <div class="recent-report-icon">
+                                <i class="fas fa-file-pdf"></i>
+                            </div>
+                            <div class="recent-report-info">
+                                <div class="recent-report-name">Daily_Summary_2026-01-15.pdf</div>
+                                <div class="recent-report-meta">
+                                    <span>Daily Summary</span>
+                                    <span>•</span>
+                                    <span>Generated: Jan 15, 2026</span>
+                                    <span>•</span>
+                                    <span>2.4 MB</span>
+                                </div>
+                            </div>
+                            <div class="recent-report-actions">
+                                <button class="btn-icon-small" title="Download">
+                                    <i class="fas fa-download"></i>
+                                </button>
+                                <button class="btn-icon-small" title="View">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="btn-icon-small" title="Share">
+                                    <i class="fas fa-share-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="recent-report-item">
+                            <div class="recent-report-icon">
+                                <i class="fas fa-file-excel"></i>
+                            </div>
+                            <div class="recent-report-info">
+                                <div class="recent-report-name">Monthly_Analysis_December_2025.xlsx</div>
+                                <div class="recent-report-meta">
+                                    <span>Monthly Analysis</span>
+                                    <span>•</span>
+                                    <span>Generated: Jan 1, 2026</span>
+                                    <span>•</span>
+                                    <span>5.1 MB</span>
+                                </div>
+                            </div>
+                            <div class="recent-report-actions">
+                                <button class="btn-icon-small" title="Download">
+                                    <i class="fas fa-download"></i>
+                                </button>
+                                <button class="btn-icon-small" title="View">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="btn-icon-small" title="Share">
+                                    <i class="fas fa-share-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="recent-report-item">
+                            <div class="recent-report-icon">
+                                <i class="fas fa-file-pdf"></i>
+                            </div>
+                            <div class="recent-report-info">
+                                <div class="recent-report-name">Environmental_Impact_Q4_2025.pdf</div>
+                                <div class="recent-report-meta">
+                                    <span>Environmental Impact</span>
+                                    <span>•</span>
+                                    <span>Generated: Jan 5, 2026</span>
+                                    <span>•</span>
+                                    <span>3.8 MB</span>
+                                </div>
+                            </div>
+                            <div class="recent-report-actions">
+                                <button class="btn-icon-small" title="Download">
+                                    <i class="fas fa-download"></i>
+                                </button>
+                                <button class="btn-icon-small" title="View">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="btn-icon-small" title="Share">
+                                    <i class="fas fa-share-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Profile Page -->
+            <section class="page" id="profile">
+                <header class="page-header">
+                    <div class="header-content">
+                        <div>
+                            <h2 data-lang="profile.title">Settings & Profile</h2>
+                            <p>Manage your account and preferences</p>
+                        </div>
+                    </div>
+                </header>
+
+                <!-- Profile Grid -->
+                <div class="profile-grid">
+                    <!-- Profile Card -->
+                    <div class="dashboard-card profile-main-card">
+                        <div class="profile-header-section">
+                            <div class="profile-avatar-large" id="profileAvatar">LG</div>
+                            <div class="profile-header-info">
+                                <h3 id="profileName">Liam Gallagher</h3>
+                                <p id="profilePosition">System Administrator</p>
+                                <div class="profile-badges">
+                                    <span class="profile-badge">
+                                        <i class="fas fa-shield-alt"></i> Admin
+                                    </span>
+                                    <span class="profile-badge">
+                                        <i class="fas fa-check-circle"></i> Verified
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="profile-stats">
+                            <div class="profile-stat-item">
+                                <div class="profile-stat-value">247</div>
+                                <div class="profile-stat-label" data-lang="profile.days">Days Active</div>
+                            </div>
+                            <div class="profile-stat-item">
+                                <div class="profile-stat-value">156</div>
+                                <div class="profile-stat-label" data-lang="profile.reports">Reports Generated</div>
+                            </div>
+                            <div class="profile-stat-item">
+                                <div class="profile-stat-value">3</div>
+                                <div class="profile-stat-label" data-lang="profile.devices">Devices Managed</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Account Information -->
+                    <div class="dashboard-card">
+                        <div class="card-header-flex">
+                            <div>
+                                <h3 data-lang="profile.account">Account Information</h3>
+                                <p class="card-subtitle" data-lang="profile.account.subtitle">Manage your account details</p>
+                            </div>
+                        </div>
+                        <div class="profile-form">
+                            <div class="form-group-profile">
+                                <label data-lang="profile.fullname">Full Name</label>
+                                <input type="text" id="fullNameInput" placeholder="Enter your full name">
+                            </div>
+                            <div class="form-group-profile">
+                                <label data-lang="profile.position">Position</label>
+                                <input type="text" id="positionInput" placeholder="e.g. System Administrator">
+                            </div>
+                            <div class="form-group-profile">
+                                <label data-lang="profile.email">Email</label>
+                                <input type="email" id="emailDisplay" disabled>
+                            </div>
+                            <div class="form-group-profile">
+                                <label data-lang="profile.phone">Phone Number</label>
+                                <input type="tel" placeholder="+84 123 456 789">
+                            </div>
+                            <button class="btn-primary-full" data-lang="profile.save">Save Changes</button>
+                        </div>
+                    </div>
+
+                    <!-- Preferences -->
+                    <div class="dashboard-card">
+                        <div class="card-header-flex">
+                            <div>
+                                <h3 data-lang="profile.preferences">Preferences</h3>
+                                <p class="card-subtitle" data-lang="profile.preferences.subtitle">Customize your experience</p>
+                            </div>
+                        </div>
+                        <div class="preferences-form">
+                            <div class="form-group-profile">
+                                <label data-lang="profile.language">Language</label>
+                                <select id="languageSelect">
+                                    <option value="en">English</option>
+                                    <option value="vi">Tiếng Việt</option>
+                                </select>
+                            </div>
+                            <div class="form-group-profile">
+                                <label data-lang="profile.timezone">Time Zone</label>
+                                <select>
+                                    <option>UTC +7 (Bangkok, Hanoi)</option>
+                                    <option>UTC +0 (London)</option>
+                                    <option>UTC -5 (New York)</option>
+                                </select>
+                            </div>
+                            <div class="form-group-profile">
+                                <label>Notification Frequency</label>
+                                <select>
+                                    <option>Real-time</option>
+                                    <option>Hourly Digest</option>
+                                    <option>Daily Summary</option>
+                                </select>
+                            </div>
+                            <div class="preference-toggle">
+                                <div class="preference-info">
+                                    <div class="preference-label">Email Notifications</div>
+                                    <div class="preference-desc">Receive updates via email</div>
+                                </div>
+                                <label class="toggle-switch">
+                                    <input type="checkbox" checked>
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+                            <div class="preference-toggle">
+                                <div class="preference-info">
+                                    <div class="preference-label">Weekly Reports</div>
+                                    <div class="preference-desc">Get weekly summary reports</div>
+                                </div>
+                                <label class="toggle-switch">
+                                    <input type="checkbox" checked>
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+                            <button class="btn-save-profile">Save Preferences</button>
+                        </div>
+                    </div>
+
+                    <!-- Security -->
+                    <div class="dashboard-card">
+                        <div class="card-header-flex">
+                            <div>
+                                <h3>Security</h3>
+                                <p class="card-subtitle">Manage your account security</p>
+                            </div>
+                        </div>
+                        <div class="security-list">
+                            <div class="security-item">
+                                <div class="security-icon">
+                                    <i class="fas fa-key"></i>
+                                </div>
+                                <div class="security-info">
+                                    <div class="security-label">Change Password</div>
+                                    <div class="security-desc">Last changed 45 days ago</div>
+                                </div>
+                                <button class="btn-secondary-small">Change</button>
+                            </div>
+                            <div class="security-item">
+                                <div class="security-icon">
+                                    <i class="fas fa-mobile-alt"></i>
+                                </div>
+                                <div class="security-info">
+                                    <div class="security-label">Two-Factor Authentication</div>
+                                    <div class="security-desc">Add an extra layer of security</div>
+                                </div>
+                                <button class="btn-secondary-small">Enable</button>
+                            </div>
+                            <div class="security-item">
+                                <div class="security-icon">
+                                    <i class="fas fa-history"></i>
+                                </div>
+                                <div class="security-info">
+                                    <div class="security-label">Login History</div>
+                                    <div class="security-desc">View recent login activity</div>
+                                </div>
+                                <button class="btn-secondary-small">View</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="js/script.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/sidebar.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/profile.js"></script>
+    <script src="js/language.js"></script>
+</body>
+</html>

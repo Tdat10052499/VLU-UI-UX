@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yūgen Delivery - Style Guide</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Requirement: Tạo một section bị ẩn (display: none) mang ID #style-guide -->
+    <section id="style-guide">
+        <!-- Buttons -->
+        <div class="component-group">
+            <button class="btn btn-primary">Order Now</button>
+            <button class="btn btn-secondary">View Menu</button>
+        </div>
+
+        <!-- Input Fields -->
+        <div class="component-group">
+            <input type="text" class="input-field" placeholder="Enter your delivery address">
+            <input type="password" class="input-field" placeholder="Enter password">
+        </div>
+
+        <!-- Food Card (Bento Layout) -->
+        <div class="component-group">
+            <div class="bento-card">
+                <div class="card-image">
+                    <!-- Placeholder image matching cinematic tech/japanese theme -->
+                    <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&q=80&w=400" alt="Premium Sushi">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Omakase Set <span class="jp-text">お任せ</span></h3>
+                    <p class="card-desc">Premium chef's selection of seasonal sashimi</p>
+                    <div class="card-footer">
+                        <span class="price">$120</span>
+                        <button class="btn btn-icon"><i data-lucide="plus"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Navigation Bar -->
+        <div class="component-group">
+            <nav class="bottom-nav">
+                <a href="#" class="nav-item active">
+                    <i data-lucide="home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <i data-lucide="search"></i>
+                    <span>Explore</span>
+                </a>
+                <a href="#" class="nav-item go-to-cart">
+                    <i data-lucide="shopping-bag"></i>
+                    <span>Cart</span>
+                </a>
+                <a href="#" class="nav-item go-to-profile">
+                    <i data-lucide="user"></i>
+                    <span>Profile</span>
+                </a>
+            </nav>
+        </div>
+    </section>
+
+    <!-- App Screens -->
+    <!-- Screen 1: Splash Screen -->
+    <div id="splash-screen" class="screen active">
+        <div class="splash-background"></div>
+        <div class="splash-content">
+            <h1 class="logo">YŪGEN <span class="logo-jp">幽玄</span></h1>
+            <p class="tagline">Tradition Meets Tomorrow. The Future of Sushi.</p>
+        </div>
+        <div class="splash-footer">
+            <button id="btn-get-started" class="btn btn-primary btn-block">Get Started</button>
+        </div>
+    </div>
+
+    <!-- Screen 2: Auth Screen -->
+    <div id="auth-screen" class="screen">
+        <div class="blur-bg"></div>
+        <div class="auth-content">
+            <h2 class="screen-title">Welcome Back</h2>
+            <p class="screen-subtitle">Sign in to continue your journey</p>
+            
+            <form class="auth-form" onsubmit="event.preventDefault();">
+                <div class="input-container">
+                    <i data-lucide="mail" class="input-icon"></i>
+                    <input type="email" class="input-field with-icon" placeholder="Email Address">
+                </div>
+                <div class="input-container">
+                    <i data-lucide="lock" class="input-icon"></i>
+                    <input type="password" class="input-field with-icon" placeholder="Password">
+                </div>
+                
+                <div class="auth-buttons">
+                    <button type="button" id="btn-sign-in" class="btn btn-primary btn-block">Sign In</button>
+                    <button type="button" class="btn btn-secondary btn-block">
+                        <i data-lucide="chrome"></i> Continue with Google
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Screen 3: Home Screen -->
+    <div id="home-screen" class="screen">
+        <div class="home-header">
+            <div class="greeting">
+                <p class="greeting-text">Good Evening, Master</p>
+                <h3 class="delivery-address"><i data-lucide="map-pin"></i> 1-1 Chiyoda, Tokyo <i data-lucide="chevron-down"></i></h3>
+            </div>
+            <div class="header-avatar">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" alt="User">
+            </div>
+        </div>
+
+        <div class="home-search">
+            <div class="input-container">
+                <i data-lucide="search" class="input-icon"></i>
+                <input type="text" class="input-field with-icon search-bar" placeholder="Search premium sushi...">
+                <button class="btn-icon filter-btn"><i data-lucide="sliders"></i></button>
+            </div>
+        </div>
+
+        <div class="home-popular">
+            <div class="section-title">
+                <h3>Popular Now</h3>
+                <a href="#">See All</a>
+            </div>
+            <div class="popular-grid">
+                <!-- Card 1 -->
+                <div class="bento-card compact-card go-to-detail">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&q=80&w=400" alt="Omakase">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Omakase <span class="jp-text">お任せ</span></h3>
+                        <div class="card-footer">
+                            <span class="price">$120</span>
+                            <button class="btn btn-icon"><i data-lucide="plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="bento-card compact-card go-to-detail">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1553621042-f6e147245754?auto=format&fit=crop&q=80&w=400" alt="Sakura Bento">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Sakura <span class="jp-text">桜弁当</span></h3>
+                        <div class="card-footer">
+                            <span class="price">$85</span>
+                            <button class="btn btn-icon"><i data-lucide="plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom-nav-container">
+            <nav class="bottom-nav">
+                <a href="#" class="nav-item active go-to-home">
+                    <i data-lucide="home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="#" class="nav-item go-to-explore">
+                    <i data-lucide="search"></i>
+                    <span>Explore</span>
+                </a>
+                <a href="#" class="nav-item go-to-cart">
+                    <i data-lucide="shopping-bag"></i>
+                    <span>Cart</span>
+                </a>
+                <a href="#" class="nav-item go-to-profile">
+                    <i data-lucide="user"></i>
+                    <span>Profile</span>
+                </a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Screen 4: Detail Screen -->
+    <div id="detail-screen" class="screen">
+        <div class="detail-header">
+            <button id="btn-back" class="btn-icon btn-back">
+                <i data-lucide="arrow-left"></i>
+            </button>
+            <button class="btn-icon btn-heart">
+                <i data-lucide="heart"></i>
+            </button>
+        </div>
+
+        <div class="detail-cover">
+            <img src="https://images.unsplash.com/photo-1553621042-f6e147245754?auto=format&fit=crop&q=80&w=800" alt="Sakura Bento">
+            <div class="cover-gradient"></div>
+        </div>
+
+        <div class="detail-content">
+            <div class="detail-title-row">
+                <h2 class="detail-title">Premium Sakura Bento</h2>
+                <div class="rating">
+                    <i data-lucide="star" class="star-icon"></i> 4.9
+                </div>
+            </div>
+            
+            <p class="detail-jp">プレミアム桜弁当</p>
+            
+            <p class="detail-description">
+                A meticulously crafted seasonal selection featuring Otoro, Uni, and fresh botanical ingredients. Experience the true essence of Japanese culinary art.
+            </p>
+
+            <div class="quantity-selector">
+                <span class="qty-label">Quantity</span>
+                <div class="qty-controls">
+                    <button class="btn-icon qty-btn" onclick="let q=this.nextElementSibling; q.innerText=Math.max(1,parseInt(q.innerText)-1)"><i data-lucide="minus"></i></button>
+                    <span class="qty-number">1</span>
+                    <button class="btn-icon qty-btn" onclick="let q=this.previousElementSibling; q.innerText=parseInt(q.innerText)+1"><i data-lucide="plus"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="detail-footer">
+            <button class="btn btn-primary btn-block detail-cta">
+                <span>Add to Cart</span>
+                <span class="cta-price">$85.00</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Screen 5: Explore Screen -->
+    <div id="explore-screen" class="screen">
+        <div class="explore-header">
+            <div class="explore-search">
+                <i data-lucide="search" class="explore-search-icon"></i>
+                <input type="text" class="explore-search-input" placeholder="Search for sushi, ramen, bento...">
+            </div>
+        </div>
+
+        <div class="explore-content">
+            <div class="recent-searches">
+                <h3 class="section-subtitle">Recent Searches</h3>
+                <ul class="recent-list">
+                    <li><i data-lucide="clock"></i> <span>Premium Omakase</span></li>
+                    <li><i data-lucide="clock"></i> <span>Spicy Tonkotsu Ramen</span></li>
+                    <li><i data-lucide="clock"></i> <span>Matcha Mochi</span></li>
+                </ul>
+            </div>
+
+            <div class="trending-categories">
+                <h3 class="section-subtitle">Trending Categories</h3>
+                <div class="trending-grid">
+                    <div class="trending-card bento-wide special-bg">
+                        <h4>Chef's Special</h4>
+                        <p class="jp-text">おすすめ</p>
+                    </div>
+                    <div class="trending-card bento-square">
+                        <h4>Sashimi</h4>
+                        <p class="jp-text">刺身</p>
+                    </div>
+                    <div class="trending-card bento-square">
+                        <h4>Drinks</h4>
+                        <p class="jp-text">飲み物</p>
+                    </div>
+                    <div class="trending-card bento-wide seasonal-bg">
+                        <h4>Seasonal</h4>
+                        <p class="jp-text">季節限定</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom-nav-container">
+            <nav class="bottom-nav">
+                <a href="#" class="nav-item go-to-home">
+                    <i data-lucide="home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="#" class="nav-item active go-to-explore">
+                    <i data-lucide="search"></i>
+                    <span>Explore</span>
+                </a>
+                <a href="#" class="nav-item go-to-cart">
+                    <i data-lucide="shopping-bag"></i>
+                    <span>Cart</span>
+                </a>
+                <a href="#" class="nav-item go-to-profile">
+                    <i data-lucide="user"></i>
+                    <span>Profile</span>
+                </a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Screen 6: Cart Screen -->
+    <div id="cart-screen" class="screen">
+        <div class="cart-header">
+            <button class="btn-icon btn-back go-to-home">
+                <i data-lucide="arrow-left"></i>
+            </button>
+            <h2>Your Order</h2>
+            <div style="width: 40px;"></div> <!-- Spacer for flex alignment -->
+        </div>
+
+        <div class="cart-content">
+            <!-- Delivery Info -->
+            <div class="delivery-info-card">
+                <div class="delivery-icon-wrapper">
+                    <i data-lucide="map-pin"></i>
+                </div>
+                <div class="delivery-details">
+                    <p class="delivery-address-text">1-1 Chiyoda, Tokyo</p>
+                    <p class="delivery-eta">ETA: 20 mins</p>
+                </div>
+            </div>
+
+            <!-- Order Items List -->
+            <div class="cart-items-list">
+                <!-- Item 1 -->
+                <div class="cart-item">
+                    <div class="cart-item-img">
+                        <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&q=80&w=200" alt="Omakase">
+                    </div>
+                    <div class="cart-item-info">
+                        <h4>Omakase <span class="jp-text">お任せ</span></h4>
+                        <div class="cart-item-bottom">
+                            <span class="price">$120</span>
+                            <div class="compact-qty">
+                                <button class="qty-btn-sm" onclick="let q=this.nextElementSibling; q.innerText=Math.max(1,parseInt(q.innerText)-1)"><i data-lucide="minus"></i></button>
+                                <span>1</span>
+                                <button class="qty-btn-sm" onclick="let q=this.previousElementSibling; q.innerText=parseInt(q.innerText)+1"><i data-lucide="plus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="cart-item">
+                    <div class="cart-item-img">
+                        <img src="https://images.unsplash.com/photo-1553621042-f6e147245754?auto=format&fit=crop&q=80&w=200" alt="Sakura Bento">
+                    </div>
+                    <div class="cart-item-info">
+                        <h4>Sakura <span class="jp-text">桜弁当</span></h4>
+                        <div class="cart-item-bottom">
+                            <span class="price">$85</span>
+                            <div class="compact-qty">
+                                <button class="qty-btn-sm" onclick="let q=this.nextElementSibling; q.innerText=Math.max(1,parseInt(q.innerText)-1)"><i data-lucide="minus"></i></button>
+                                <span>2</span>
+                                <button class="qty-btn-sm" onclick="let q=this.previousElementSibling; q.innerText=parseInt(q.innerText)+1"><i data-lucide="plus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Order Summary -->
+            <div class="order-summary">
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span>$290.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Delivery Fee</span>
+                    <span>$5.00</span>
+                </div>
+                <div class="summary-divider"></div>
+                <div class="summary-row total-row">
+                    <span>Total</span>
+                    <span class="total-price">$295.00</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="checkout-footer">
+            <button class="btn btn-primary btn-block checkout-cta">
+                <div class="swipe-indicator"><i data-lucide="chevrons-right"></i></div>
+                <span class="checkout-text">Swipe to Checkout</span>
+                <span class="cta-price">$295.00</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Screen 7: Profile Screen -->
+    <div id="profile-screen" class="screen">
+        <div class="profile-header">
+            <h2 class="section-subtitle" style="margin:0; text-align:center;">Profile</h2>
+        </div>
+        
+        <div class="profile-content">
+            <!-- User Info -->
+            <div class="user-info-section">
+                <div class="user-avatar">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200" alt="User Avatar">
+                </div>
+                <h3 class="user-name">Rin Tohsaka</h3>
+                <p class="user-email">rin.t@yugen.delivery</p>
+            </div>
+
+            <!-- Quick Stats -->
+            <div class="quick-stats">
+                <div class="stat-item">
+                    <span class="stat-value gold-text">2,450</span>
+                    <span class="stat-label">Yūgen Pts</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-value">12</span>
+                    <span class="stat-label">Orders</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-value">3</span>
+                    <span class="stat-label">Saved</span>
+                </div>
+            </div>
+
+            <!-- Menu Options -->
+            <div class="profile-menu">
+                <a href="#" class="menu-item">
+                    <div class="menu-icon"><i data-lucide="clock"></i></div>
+                    <span class="menu-text">Order History</span>
+                    <i data-lucide="chevron-right" class="menu-arrow"></i>
+                </a>
+                <a href="#" class="menu-item">
+                    <div class="menu-icon"><i data-lucide="credit-card"></i></div>
+                    <span class="menu-text">Payment Methods</span>
+                    <i data-lucide="chevron-right" class="menu-arrow"></i>
+                </a>
+                <a href="#" class="menu-item">
+                    <div class="menu-icon"><i data-lucide="map-pin"></i></div>
+                    <span class="menu-text">Delivery Addresses</span>
+                    <i data-lucide="chevron-right" class="menu-arrow"></i>
+                </a>
+                <a href="#" class="menu-item">
+                    <div class="menu-icon"><i data-lucide="settings"></i></div>
+                    <span class="menu-text">Settings</span>
+                    <i data-lucide="chevron-right" class="menu-arrow"></i>
+                </a>
+            </div>
+
+            <!-- Logout Button -->
+            <div class="logout-section">
+                <button class="btn btn-ghost go-to-auth">
+                    <i data-lucide="log-out"></i> Log Out
+                </button>
+            </div>
+        </div>
+
+        <!-- Bottom Navigation Bar -->
+        <div class="bottom-nav-container">
+            <nav class="bottom-nav">
+                <a href="#" class="nav-item go-to-home">
+                    <i data-lucide="home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="#" class="nav-item go-to-explore">
+                    <i data-lucide="search"></i>
+                    <span>Explore</span>
+                </a>
+                <a href="#" class="nav-item go-to-cart">
+                    <i data-lucide="shopping-bag"></i>
+                    <span>Cart</span>
+                </a>
+                <a href="#" class="nav-item active go-to-profile">
+                    <i data-lucide="user"></i>
+                    <span>Profile</span>
+                </a>
+            </nav>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>

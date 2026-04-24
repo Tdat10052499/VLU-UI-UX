@@ -5,13 +5,13 @@
 ![Bootstrap 5](https://img.shields.io/badge/Bootstrap_5-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
 ![Responsive](https://img.shields.io/badge/Responsive_Design-10B981?style=for-the-badge&logo=airplay&logoColor=white)
 
-## 🔗 Live Links
+## Live Links
 
-- 🌍 **Live Web Demo:** [Insert Vercel/GitHub Pages Link Here](https://lab06-two.vercel.app)
+- **Live Web Demo:** [Insert Vercel/GitHub Pages Link Here](https://lab06-two.vercel.app)
 
 ---
 
-## 🎯 Project Overview
+## Project Overview
 
 **Zafkiel IoT Solutions** represents the cutting edge of intelligent agriculture. This project is a comprehensive 3-page corporate website for a startup specializing in **AIoT Smart Garden** solutions. It seamlessly bridges the physical and digital worlds, demonstrating a robust convergence of **Embedded Systems, Artificial Intelligence (AI), and Web3 Technologies**. 
 
@@ -19,29 +19,29 @@ The goal of this platform is not just to display products, but to immerse the us
 
 ---
 
-## 📂 Pages Structure
+## Pages Structure
 
 The website is divided into three highly interlinked, responsive pages:
 
-- 🏠 **Home (`index.html`)**: The primary landing page introducing the core mission, featuring a Bento Grid of smart solutions, corporate contact forms, and a direct booking modal for quick client onboarding.
-- ⚙️ **Technology (`technology.html`)**: A deep dive into the Tech Stack. Showcases the deterministic hardware (ESP32), the edge AI diagnostic engine (YOLOv8), and the decentralized network infrastructure (SUI Blockchain).
-- 🌐 **Ecosystem (`ecosystem.html`)**: A visual masterpiece illustrating the continuous data flow across physical, digital, and management layers using an interactive Zig-Zag layout with dynamic CSS connecting lines.
+- **Home (`index.html`)**: The primary landing page introducing the core mission, featuring a Bento Grid of smart solutions, corporate contact forms, and a direct booking modal for quick client onboarding.
+- **Technology (`technology.html`)**: A deep dive into the Tech Stack. Showcases the deterministic hardware (ESP32), the edge AI diagnostic engine (YOLOv8), and the decentralized network infrastructure (SUI Blockchain).
+- **Ecosystem (`ecosystem.html`)**: A visual masterpiece illustrating the continuous data flow across physical, digital, and management layers using an interactive Zig-Zag layout with dynamic CSS connecting lines.
 
 ---
 
-## 🎨 Design Philosophy
+## Design Philosophy
 
 The UI/UX architecture is driven by a blend of **"Cinematic Deep Tech"** and **"Minimalist Japanese"** aesthetics. We prioritize visual excellence, immersive dark mode themes, and precise spacing.
 
 - **Color Palette:**
-  - 🌌 **Midnight Purple** (`#0f0518`): The deep, mysterious void serving as the foundational background.
-  - 🔴 **Crimson** (`#b3002d`): The primary accent color, providing aggressive, futuristic highlights.
-  - 🟡 **Gold** (`#ffd700`): The secondary accent color, representing premium quality and Web3/Blockchain integration.
+  - **Midnight Purple** (`#0f0518`): The deep, mysterious void serving as the foundational background.
+  - **Crimson** (`#b3002d`): The primary accent color, providing aggressive, futuristic highlights.
+  - **Gold** (`#ffd700`): The secondary accent color, representing premium quality and Web3/Blockchain integration.
 - **Signature UI Effect:** The **"Liquid Glass"** (Glassmorphism). Achieved via custom CSS `backdrop-filter: blur()`, giving cards and navbars a frosted, semi-transparent, and highly premium look over the dark canvas.
 
 ---
 
-## 🚀 Technical Highlights
+## Technical Highlights
 
 - **100% Bootstrap 5 Grid System:** Fully responsive layouts adapting flawlessly from ultra-wide desktops (`col-lg-X`) to mobile viewports (`col-12`).
 - **Bento Grid Architecture:** Clean, modular card layouts utilized in both the Solutions and Technology sections for maximum scannability.
@@ -51,7 +51,7 @@ The UI/UX architecture is driven by a blend of **"Cinematic Deep Tech"** and **"
 
 ---
 
-## 💻 Getting Started
+## Getting Started
 
 To view and interact with the project locally, follow these simple steps:
 
@@ -62,18 +62,18 @@ To view and interact with the project locally, follow these simple steps:
 
 ---
 
-## 📸 Screenshots
+## Screenshots
 
 *Replace the placeholders below with actual project screenshots.*
 
 ### Home Page
-![Home Page](./assets/screenshot-home.png)
+![Home Page](./assets/home.png)
 
 ### Technology Page
-![Technology Page](./assets/screenshot-tech.png)
+![Technology Page](./assets/tech.png)
 
 ### Ecosystem Page
-![Ecosystem Page](./assets/screenshot-ecosystem.png)
+![Ecosystem Page](./assets/ecosystem.png)
 
 ---
 *Crafted with precision by [Tuan D. - Software Engineer]*

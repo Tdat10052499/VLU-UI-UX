@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>🍱 Premium Japanese Food Delivery - UI Prototype</h1>
+  <h1>Premium Japanese Food Delivery - UI Prototype</h1>
   <p><i>Trải nghiệm tinh hoa ẩm thực Nhật Bản thông qua giao diện tương lai</i></p>
 
   <!-- Badges -->
@@ -10,15 +10,14 @@
 
 <br />
 
-## 🔗 Liên kết Dự án (Project Links)
+## Liên kết Dự án (Project Links)
 > **Lưu ý dành cho Giảng viên:** Vui lòng truy cập các đường dẫn bên dưới để xem thiết kế gốc và trải nghiệm thực tế.
 
-- 🎨 **[Figma Design Prototype](#)** *(Nhập link Figma của bạn vào đây)*
-- 🌍 **[Live Web Demo](#)** *(Nhập link Vercel/Netlify của bạn vào đây)*
+- **[Live Web Demo](#)** *(Nhập link Vercel/Netlify của bạn vào đây)*
 
 ---
 
-## 📖 1. Tổng quan Dự án (Overview)
+## 1. Tổng quan Dự án (Overview)
 **Premium Japanese Food Delivery** là một nguyên mẫu ứng dụng (UI Prototype) cao cấp, được thiết kế chuyên biệt cho dịch vụ giao đồ ăn Nhật Bản. Dự án mô phỏng toàn bộ luồng trải nghiệm người dùng (User Flow) khép kín, được xây dựng hoàn toàn từ **Pure HTML/CSS/JS** mà không phụ thuộc vào framework. 
 
 Hệ thống bao gồm **7 màn hình (Screens)** kết nối mượt mà:
@@ -32,32 +31,32 @@ Hệ thống bao gồm **7 màn hình (Screens)** kết nối mượt mà:
 
 ---
 
-## 🎨 2. Triết lý Thiết kế (Design Philosophy)
+## 2. Triết lý Thiết kế (Design Philosophy)
 Giao diện là sự giao thoa hoàn hảo giữa giá trị truyền thống và công nghệ tương lai, thể hiện qua 2 concept cốt lõi:
 
-* 🌿 **Minimalist Japanese (Tối giản Nhật Bản):**
+* **Minimalist Japanese (Tối giản Nhật Bản):**
   * Tôn trọng khoảng trắng (Negative space).
   * Lược bỏ các chi tiết đồ họa thừa thãi, hướng sự tập trung hoàn toàn vào hình ảnh ẩm thực.
   * Typography gọn gàng, có điểm nhấn bằng tiếng Nhật (Kanji).
-* 🌌 **Cinematic Deep Tech (Công nghệ Chiều sâu):**
+* **Cinematic Deep Tech (Công nghệ Chiều sâu):**
   * **Color Palette:** Không gian màu nền tối thăm thẳm (`Midnight Purple: #0B0510`), điểm xuyết bởi sắc đỏ quyền lực (`Crimson: #D91636`) và điểm nhấn sang trọng (`Accent Gold: #D4AF37`).
   * **Material:** Ứng dụng triệt để hiệu ứng **Liquid Glassmorphism** (kính mờ kết hợp ánh sáng lỏng) với `backdrop-filter`, tạo chiều sâu và cảm giác cao cấp.
 
 ---
 
-## 🧩 3. Hệ thống Component (Reusable Components)
+## 3. Hệ thống Component (Reusable Components)
 Để đảm bảo tính nhất quán (Consistency) và khả năng mở rộng (Scalability), dự án được thiết kế xoay quanh một hệ thống UI Components tái sử dụng (ẩn tại `#style-guide`):
 
-- **🔘 Buttons:** 
+- **Buttons:** 
   - `Primary`: Nhấn mạnh bằng sắc Crimson với hiệu ứng Neon Glow (`box-shadow`).
   - `Ghost/Secondary`: Trong suốt, chỉ hiện viền sáng mờ, đổi style khi hover.
-- **🍱 Bento Cards:** Cấu trúc thẻ trình bày món ăn lấy cảm hứng từ hộp bento Nhật Bản. Kết hợp lưới phi đối xứng và hiệu ứng ánh sáng gradient quét dọc bề mặt khi tương tác.
-- **📱 Bottom Navigation Bar:** Thanh Dock nổi kiểu Glassmorphism, ghim sát đáy màn hình. Tích hợp hiệu ứng Micro-animation thay đổi trạng thái cực kỳ êm ái.
-- **⌨️ Form Inputs:** Trường nhập liệu không viền, bo cong viên nang (Capsule), viền neon sẽ sáng nhẹ khi Focus.
+- **Bento Cards:** Cấu trúc thẻ trình bày món ăn lấy cảm hứng từ hộp bento Nhật Bản. Kết hợp lưới phi đối xứng và hiệu ứng ánh sáng gradient quét dọc bề mặt khi tương tác.
+- **Bottom Navigation Bar:** Thanh Dock nổi kiểu Glassmorphism, ghim sát đáy màn hình. Tích hợp hiệu ứng Micro-animation thay đổi trạng thái cực kỳ êm ái.
+- **Form Inputs:** Trường nhập liệu không viền, bo cong viên nang (Capsule), viền neon sẽ sáng nhẹ khi Focus.
 
 ---
 
-## 🚀 4. Hướng dẫn Cài đặt & Chạy dự án (Getting Started)
+## 4. Hướng dẫn Cài đặt & Chạy dự án (Getting Started)
 Do dự án được tối ưu hóa 100% bằng Native Web Technologies, bạn không cần cài đặt node_modules hay chạy script build phức tạp:
 
 1. Tải về hoặc giải nén thư mục `lab05`.
@@ -66,7 +65,7 @@ Do dự án được tối ưu hóa 100% bằng Native Web Technologies, bạn k
 
 ---
 
-## 📁 5. Cấu trúc Thư mục (Folder Structure)
+## 5. Cấu trúc Thư mục (Folder Structure)
 ```text
 lab05/
 │

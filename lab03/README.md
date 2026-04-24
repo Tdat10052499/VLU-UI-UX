@@ -2,7 +2,7 @@
 
 [![Vercel Deploy](https://img.shields.io/badge/Live_Demo-Vercel-black?style=for-the-badge&logo=vercel)](https://lab03-gamma.vercel.app)
 
-## 🌌 Overview
+## Overview
 
 Welcome to the **Personal Portfolio - Lab03**. This project serves as the digital portfolio of a Software Engineer dedicated to architecting **User-centric** systems. Driven by a profound passion for **Embedded Programming (IoT)** and **Web3** technologies, this platform is built to showcase a harmonious blend of logic and aesthetics.
 
@@ -10,7 +10,7 @@ The visual direction follows a **"Cinematic Deep Tech"** approach, deeply inspir
 
 ---
 
-## 📸 Web Interface (Giao diện trang web)
+## Web Interface (Giao diện trang web)
 
 > *Note: Please replace the placeholder links below with actual screenshots of the deployed site.*
 
@@ -25,7 +25,7 @@ The visual direction follows a **"Cinematic Deep Tech"** approach, deeply inspir
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 This project is built as a high-performance static site without the overhead of heavy build tools. It was constructed utilizing standard web technologies alongside rapid prototyping tools:
 
@@ -36,35 +36,35 @@ This project is built as a high-performance static site without the overhead of 
 
 ---
 
-## 🚀 Projects & Milestones
+## Projects & Milestones
 
 This portfolio proudly exhibits cutting-edge projects and key achievements:
 
 ### Featured Projects
-- 🌿 **AIoT Smart Garden**: An automated monitoring and care system integrating computer vision for real-time anomaly detection. *(Technologies: ESP32, MicroPython, YOLOv8)*
-- 🔗 **SUI Harvest**: A highly transparent, decentralized resource management solution leveraging modern Web3 architecture. *(Technologies: SUI ecosystem, Move, Blockchain)*
-- ⚙️ **Zafkiel-Code**: A next-generation software architecture platform currently under rigorous development. *(Status: In Development)*
+- **AIoT Smart Garden**: An automated monitoring and care system integrating computer vision for real-time anomaly detection. *(Technologies: ESP32, MicroPython, YOLOv8)*
+- **SUI Harvest**: A highly transparent, decentralized resource management solution leveraging modern Web3 architecture. *(Technologies: SUI ecosystem, Move, Blockchain)*
+- **Zafkiel-Code**: A next-generation software architecture platform currently under rigorous development. *(Status: In Development)*
 
 ### Key Achievements
-- 🏆 **2nd Place Winner - Hackathon SUI Vietnam x Van Lang University**: Recognized for delivering a highly practical Blockchain solution that contributes sustainable value to the SUI ecosystem.
+- **2nd Place Winner - Hackathon SUI Vietnam x Van Lang University**: Recognized for delivering a highly practical Blockchain solution that contributes sustainable value to the SUI ecosystem.
 
 ---
 
-## 📂 Folder Structure
+## Folder Structure
 
 ```text
-📦 lab03
- ┣ 📜 index.html       # The main HTML structure containing all UI components
- ┣ 📜 style.css        # Custom styles, animations, and Glassmorphism effects
- ┣ 📜 bg.png           # The cinematic fluid gradient background image
- ┣ 📜 vercel.json      # Static routing and caching configuration for Vercel
- ┣ 📜 DEPLOY.md        # Step-by-step Vercel CLI deployment guide
- ┗ 📜 README.md        # Project documentation (This file)
+lab03
+ ┣ index.html       # The main HTML structure containing all UI components
+ ┣ style.css        # Custom styles, animations, and Glassmorphism effects
+ ┣ bg.png           # The cinematic fluid gradient background image
+ ┣ vercel.json      # Static routing and caching configuration for Vercel
+ ┣ DEPLOY.md        # Step-by-step Vercel CLI deployment guide
+ ┗ README.md        # Project documentation (This file)
 ```
 
 ---
 
-## 💻 How to Run Locally
+## How to Run Locally
 
 Since this is a static website, getting it running on your local machine is incredibly straightforward and requires no package installation:
 

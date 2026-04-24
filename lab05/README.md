@@ -82,11 +82,11 @@ lab05/
 
 | Home Screen | Detail Screen | Cart Screen |
 | :---: | :---: | :---: |
-| ![Home Screen](./assets/home.png) | ![Detail Screen](./assets/detail.png) | ![Cart Screen](./assets/cart.png) |
+| ![Home Screen](./assets/images/home.png) | ![Detail Screen](./assets/images/detail.png) | ![Cart Screen](./assets/images/cart.png) |
 
 | Explore Screen | Profile Screen | Sign In |
 | :---: | :---: | :---: |
-| ![Explore Screen](./assets/explore.png) | ![Profile Screen](./assets/profile.png) | ![Sign In](./assets/signin.png) |
+| ![Explore Screen](./assets/images/explore.png) | ![Profile Screen](./assets/images/profile.png) | ![Sign In](./assets/images/signin.png) |
 
 ---
 *Developed with ❤️ by **Hồ Du Tuấn Đạt** - VLU UI/UX Design Course.*

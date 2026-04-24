@@ -1,0 +1,205 @@
+:root {
+    /* Core Background: Midnight Purple */
+    --bs-body-bg: #0f0518; 
+    --bs-body-color: #e2e2e2;
+    
+    /* Primary Color: Crimson */
+    --bs-primary: #b90e2a; 
+    --bs-primary-rgb: 185, 14, 42;
+    
+    /* Secondary/Accent Color: Gold */
+    --bs-secondary: #d4af37; 
+    --bs-secondary-rgb: 212, 175, 55;
+    
+    /* Typography: Modern Sans-serif */
+    --bs-font-sans-serif: 'Noto Sans JP', sans-serif;
+    --bs-body-font-family: var(--bs-font-sans-serif);
+}
+
+body {
+    background-color: var(--bs-body-bg);
+    color: var(--bs-body-color);
+    font-family: var(--bs-font-sans-serif);
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+    z-index: 0;
+}
+
+/* Dynamic Dot Background Base */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(circle at top center, #1a0b2e 0%, #0a0410 100%);
+    z-index: -2;
+}
+
+/* Dynamic Dot Background Pattern */
+body::after {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: radial-gradient(rgba(212, 175, 55, 0.15) 3px, transparent 3px);
+    background-size: 90px 90px;
+    z-index: -1;
+    animation: dynamicDots 60s linear infinite;
+    pointer-events: none;
+    filter: blur(2px); /* Makes dots blurrier */
+}
+
+@keyframes dynamicDots {
+    0% { background-position: 0 0; }
+    100% { background-position: -90px -90px; }
+}
+
+/* Cursor Glow Effect */
+.cursor-glow {
+    position: fixed;
+    top: 0; left: 0;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.12) 0%, transparent 60%);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    mix-blend-mode: screen;
+    transition: opacity 0.5s ease;
+    opacity: 0; 
+    will-change: transform;
+}
+
+/* Explicit class overrides to ensure Bootstrap CDN compatibility */
+.text-primary { color: var(--bs-primary) !important; }
+.text-secondary { color: var(--bs-secondary) !important; }
+.bg-primary { background-color: var(--bs-primary) !important; }
+.bg-secondary { background-color: var(--bs-secondary) !important; }
+
+/* Typography Utilities */
+.tracking-widest { letter-spacing: 0.2em; }
+.letter-spacing-wide { letter-spacing: 0.1em; }
+
+/* Navigation Styling */
+.navbar-brand {
+    font-size: 1.5rem;
+}
+.nav-link {
+    color: rgba(255, 255, 255, 0.7) !important;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+.nav-link:hover, .nav-link.active {
+    color: var(--bs-secondary) !important;
+}
+
+/* Button Customization (Minimalist & Deep Tech) */
+.btn-primary {
+    background-color: var(--bs-primary);
+    border: 1px solid var(--bs-primary);
+    color: #fff;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    border-color: var(--bs-primary);
+    color: var(--bs-primary);
+    box-shadow: 0 0 20px rgba(185, 14, 42, 0.4); /* Glow effect */
+}
+
+/* Specific text tweaks */
+.text-muted {
+    color: #8c889f !important;
+    line-height: 1.7;
+}
+
+/* Cinematic Feature Cards */
+.cinematic-card {
+    background: rgba(26, 11, 46, 0.4); /* Translucent Midnight Purple */
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px); /* Glassmorphism */
+    -webkit-backdrop-filter: blur(10px);
+    transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), border-color 0.5s ease;
+    border-radius: 0; /* Minimalist straight edges */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Glassmorphism Border Enhancement */
+.glass-border {
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3) !important;
+}
+
+.glass-border:hover {
+    border-color: rgba(212, 175, 55, 0.4) !important;
+    box-shadow: 0 8px 32px 0 rgba(212, 175, 55, 0.15) !important;
+}
+
+.cinematic-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(135deg, rgba(212,175,55,0.05) 0%, transparent 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.cinematic-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(212, 175, 55, 0.3); /* Gold glow border on hover */
+}
+
+.cinematic-card:hover::before {
+    opacity: 1;
+}
+
+/* Custom minimal accent line */
+.accent-line {
+    height: 2px;
+    width: 30px;
+    background-color: var(--bs-primary);
+    transition: width 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), background-color 0.3s ease;
+}
+
+.cinematic-card:hover .accent-line {
+    width: 60px;
+    background-color: var(--bs-secondary); /* Crimson switches to Gold */
+}
+
+/* Interaction Hover Slide */
+.hover-slide {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+.cinematic-card:hover .hover-slide {
+    transform: translateX(5px);
+}
+
+.min-vh-50 {
+    min-height: 60vh;
+}
+
+/* Custom Form Controls for Cinematic Theme */
+.form-control {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    color: #fff !important;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0; /* Match minimalist aesthetic */
+}
+
+.form-control:focus {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    border-color: var(--bs-secondary);
+    box-shadow: 0 0 0 0.25rem rgba(212, 175, 55, 0.25);
+}
+
+.form-floating > label {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.form-control::placeholder {
+    color: transparent !important; /* Required for floating labels */
+}

@@ -7,7 +7,7 @@
 
 ## 🔗 Live Links
 
-- 🌍 **Live Web Demo:** [Insert Vercel/GitHub Pages Link Here](#)
+- 🌍 **Live Web Demo:** [Insert Vercel/GitHub Pages Link Here](https://lab06-two.vercel.app)
 
 ---
 

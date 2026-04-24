@@ -1,6 +1,6 @@
 <div align="center">
   <h1>Premium Japanese Food Delivery - UI Prototype</h1>
-  <p><i>Trải nghiệm tinh hoa ẩm thực Nhật Bản thông qua giao diện tương lai</i></p>
+  <p><i>Experience the essence of Japanese cuisine through a futuristic interface</i></p>
 
   <!-- Badges -->
   <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
@@ -10,75 +10,75 @@
 
 <br />
 
-## Liên kết Dự án (Project Links)
-> **Lưu ý dành cho Giảng viên:** Vui lòng truy cập các đường dẫn bên dưới để xem thiết kế gốc và trải nghiệm thực tế.
+## Project Links
+> **Note for Instructors:** Please visit the links below to view the actual design and experience the live prototype.
 
-- **[Live Web Demo](#)** *(Nhập link Vercel/Netlify của bạn vào đây)*
-
----
-
-## 1. Tổng quan Dự án (Overview)
-**Premium Japanese Food Delivery** là một nguyên mẫu ứng dụng (UI Prototype) cao cấp, được thiết kế chuyên biệt cho dịch vụ giao đồ ăn Nhật Bản. Dự án mô phỏng toàn bộ luồng trải nghiệm người dùng (User Flow) khép kín, được xây dựng hoàn toàn từ **Pure HTML/CSS/JS** mà không phụ thuộc vào framework. 
-
-Hệ thống bao gồm **7 màn hình (Screens)** kết nối mượt mà:
-1. `Splash Screen`: Màn hình khởi động, mang đậm âm hưởng thương hiệu.
-2. `Sign In`: Trải nghiệm đăng nhập tối giản và tinh tế.
-3. `Home Screen`: Trang chủ được cá nhân hóa với các món ăn *Popular Now*.
-4. `Explore Screen`: Khu vực tìm kiếm và khám phá các chuyên mục đang nổi bật (Trending).
-5. `Cart Screen`: Giỏ hàng với bảng tóm tắt chi phí và nút *Swipe-to-Checkout* độc đáo.
-6. `Profile Screen`: Tóm tắt thông tin người dùng, điểm thưởng và thống kê cá nhân.
-7. `Detail Screen`: Trang chi tiết món ăn tập trung vào thị giác (Visual-centric).
+- **[Live Web Demo](https://lab05-gamma.vercel.app)**
 
 ---
 
-## 2. Triết lý Thiết kế (Design Philosophy)
-Giao diện là sự giao thoa hoàn hảo giữa giá trị truyền thống và công nghệ tương lai, thể hiện qua 2 concept cốt lõi:
+## 1. Project Overview
+**Premium Japanese Food Delivery** is a high-end UI Prototype specifically designed for a Japanese food delivery service. The project simulates a complete and seamless User Flow, built entirely from **Pure HTML/CSS/JS** without relying on heavy frameworks.
 
-* **Minimalist Japanese (Tối giản Nhật Bản):**
-  * Tôn trọng khoảng trắng (Negative space).
-  * Lược bỏ các chi tiết đồ họa thừa thãi, hướng sự tập trung hoàn toàn vào hình ảnh ẩm thực.
-  * Typography gọn gàng, có điểm nhấn bằng tiếng Nhật (Kanji).
-* **Cinematic Deep Tech (Công nghệ Chiều sâu):**
-  * **Color Palette:** Không gian màu nền tối thăm thẳm (`Midnight Purple: #0B0510`), điểm xuyết bởi sắc đỏ quyền lực (`Crimson: #D91636`) và điểm nhấn sang trọng (`Accent Gold: #D4AF37`).
-  * **Material:** Ứng dụng triệt để hiệu ứng **Liquid Glassmorphism** (kính mờ kết hợp ánh sáng lỏng) với `backdrop-filter`, tạo chiều sâu và cảm giác cao cấp.
+The system consists of **7 interconnected screens**:
+1. `Splash Screen`: The launch screen, heavily infused with brand identity.
+2. `Sign In`: A minimalist and refined login experience.
+3. `Home Screen`: A personalized dashboard featuring *Popular Now* items.
+4. `Explore Screen`: A search and discovery area highlighting Trending Categories.
+5. `Cart Screen`: A cart summary featuring a unique *Swipe-to-Checkout* button.
+6. `Profile Screen`: User information summary, reward points, and personal statistics.
+7. `Detail Screen`: A visual-centric food detail page.
 
 ---
 
-## 3. Hệ thống Component (Reusable Components)
-Để đảm bảo tính nhất quán (Consistency) và khả năng mở rộng (Scalability), dự án được thiết kế xoay quanh một hệ thống UI Components tái sử dụng (ẩn tại `#style-guide`):
+## 2. Design Philosophy
+The interface is a perfect intersection of traditional values and futuristic technology, expressed through 2 core concepts:
+
+* **Minimalist Japanese:**
+  * Respect for negative space.
+  * Elimination of redundant graphic details, focusing entirely on culinary imagery.
+  * Clean typography, accented with Japanese characters (Kanji).
+* **Cinematic Deep Tech:**
+  * **Color Palette:** A profound dark background (`Midnight Purple: #0B0510`), accented by an authoritative red (`Crimson: #D91636`) and luxurious highlights (`Accent Gold: #D4AF37`).
+  * **Material:** Extensive use of **Liquid Glassmorphism** (frosted glass combined with liquid lighting) via `backdrop-filter`, creating depth and a premium feel.
+
+---
+
+## 3. Reusable Components
+To ensure Consistency and Scalability, the project is designed around a system of reusable UI Components (hidden at `#style-guide`):
 
 - **Buttons:** 
-  - `Primary`: Nhấn mạnh bằng sắc Crimson với hiệu ứng Neon Glow (`box-shadow`).
-  - `Ghost/Secondary`: Trong suốt, chỉ hiện viền sáng mờ, đổi style khi hover.
-- **Bento Cards:** Cấu trúc thẻ trình bày món ăn lấy cảm hứng từ hộp bento Nhật Bản. Kết hợp lưới phi đối xứng và hiệu ứng ánh sáng gradient quét dọc bề mặt khi tương tác.
-- **Bottom Navigation Bar:** Thanh Dock nổi kiểu Glassmorphism, ghim sát đáy màn hình. Tích hợp hiệu ứng Micro-animation thay đổi trạng thái cực kỳ êm ái.
-- **Form Inputs:** Trường nhập liệu không viền, bo cong viên nang (Capsule), viền neon sẽ sáng nhẹ khi Focus.
+  - `Primary`: Emphasized with a Crimson hue and a Neon Glow effect (`box-shadow`).
+  - `Ghost/Secondary`: Transparent with a subtle luminous border, changing style on hover.
+- **Bento Cards:** Food presentation cards inspired by Japanese bento boxes. Features an asymmetrical grid and a vertical gradient lighting effect upon interaction.
+- **Bottom Navigation Bar:** A floating, glassmorphism-style dock pinned to the bottom. Integrates extremely smooth micro-animations for state changes.
+- **Form Inputs:** Borderless, capsule-shaped input fields with a neon border that lightly glows on Focus.
 
 ---
 
-## 4. Hướng dẫn Cài đặt & Chạy dự án (Getting Started)
-Do dự án được tối ưu hóa 100% bằng Native Web Technologies, bạn không cần cài đặt node_modules hay chạy script build phức tạp:
+## 4. Getting Started
+Since the project is 100% optimized using Native Web Technologies, there is no need to install `node_modules` or run complex build scripts:
 
-1. Tải về hoặc giải nén thư mục `lab05`.
-2. Mở file `index.html` trực tiếp bằng bất kỳ trình duyệt web hiện đại nào (Khuyên dùng **Google Chrome** hoặc **Safari** để có trải nghiệm hiệu ứng bóng kính `backdrop-filter` mượt mà nhất).
-3. **Mẹo trải nghiệm:** Nhấn `F12` (Mở Developer Tools) và bật chế độ **Device Toolbar** để mô phỏng kích thước màn hình Mobile (ví dụ: iPhone 14 Pro).
+1. Download or extract the `lab05` directory.
+2. Open the `index.html` file directly using any modern web browser (**Google Chrome** or **Safari** is recommended for the smoothest `backdrop-filter` glass effect).
+3. **Pro Tip:** Press `F12` (Open Developer Tools) and toggle the **Device Toolbar** to simulate a Mobile screen size (e.g., iPhone 14 Pro).
 
 ---
 
-## 5. Cấu trúc Thư mục (Folder Structure)
+## 5. Folder Structure
 ```text
 lab05/
 │
-├── index.html       # DOM Structure chứa toàn bộ 7 màn hình và Style Guide
-├── style.css        # Hệ thống CSS Variables, Global Styling, Layout và Animation
-├── script.js        # Flow Control: Điều hướng mượt mà (Fade) giữa các màn hình
-└── README.md        # Tài liệu dự án (File hiện tại)
+├── index.html       # DOM Structure containing all 7 screens and the Style Guide
+├── style.css        # CSS Variables, Global Styling, Layout, and Animations
+├── script.js        # Flow Control: Smooth navigation (Fade) between screens
+└── README.md        # Project Documentation (This file)
 ```
 
 ---
 
-## 📸 6. Ảnh chụp Màn hình (Screenshots)
-> *Placeholder: Hãy đặt file ảnh của bạn vào thư mục `/assets/` và chúng sẽ tự động hiển thị ở đây.*
+## 6. Screenshots
+> *Placeholder: Place your image files in the `/assets/` folder and they will automatically display here.*
 
 | Home Screen | Detail Screen | Cart Screen |
 | :---: | :---: | :---: |
@@ -89,4 +89,4 @@ lab05/
 | ![Explore Screen](./assets/explore.png) | ![Profile Screen](./assets/profile.png) | ![Sign In](./assets/signin.png) |
 
 ---
-*Developed with ❤️ by **[Tên của Bạn]** - VLU UI/UX Design Course.*
+*Developed with ❤️ by **Hồ Du Tuấn Đạt** - VLU UI/UX Design Course.*

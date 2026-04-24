@@ -17,9 +17,6 @@ The visual direction follows a **"Cinematic Deep Tech"** approach, deeply inspir
 ### Desktop View
 ![Desktop View - A wide, cinematic layout showcasing the glowing Deep Tech aesthetic, featuring a full-width hero section and a glassmorphism portfolio grid perfectly aligned](./assets/images/desktop.png)
 
-### Tablet View
-![Tablet View - A perfectly responsive Bootstrap grid adapting the project cards into a 2-column layout and scaling the achievements carousel for medium screens](./assets/images/tablet.png)
-
 ### Mobile View
 ![Mobile View - A streamlined, vertical layout featuring a dark fixed-top hamburger menu, stacked single-column project cards, and a touch-friendly floating-label contact form](./assets/images/mobile.png)
 

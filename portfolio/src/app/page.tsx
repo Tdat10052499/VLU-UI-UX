@@ -1,18 +1,19 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Terminal, GraduationCap, BookOpen, User, ArrowRight, ExternalLink } from "lucide-react";
+import { Terminal, GraduationCap, BookOpen, User, ExternalLink, Code } from "lucide-react";
 
 const LABS = [
-  { id: "01", title: "Figma Fundamentals", desc: "Introduction to Figma tools, setting up frames, and creating basic low-fidelity wireframes for web." },
-  { id: "02", title: "Prototyping & Interactions", desc: "Building interactive prototypes with smart animate, overlays, and advanced scroll behaviors." },
-  { id: "03", title: "Design Systems", desc: "Creating a comprehensive design system including typography, color palettes, and reusable components." },
-  { id: "04", title: "Responsive Web Design", desc: "Designing responsive layouts for mobile, tablet, and desktop viewports using auto-layout." },
-  { id: "05", title: "User Testing & Iteration", desc: "Conducting usability tests on prototypes, gathering feedback, and refining the user experience." },
-  { id: "06", title: "Zafkiel IoT Platform", desc: "Finalizing high-fidelity screens for a complete smart agriculture web application with cinematic aesthetics." },
+  { id: "01", title: "Lab 01", desc: "Introduction to Figma tools, setting up frames, and creating basic low-fidelity wireframes for web.", demoUrl: "https://vlu-energy-management-system-7l0lbdfro-ho-du-dat-tuans-projects.vercel.app/", githubUrl: "https://github.com/Tdat10052499/VLU-UI-UX/tree/main/lab01" },
+  { id: "02", title: "Lab 02", desc: "Building interactive prototypes with smart animate, overlays, and advanced scroll behaviors.", demoUrl: null, githubUrl: "https://github.com/Tdat10052499/VLU-UI-UX/tree/main/lab02" },
+  { id: "03", title: "Lab 03", desc: "Creating a comprehensive design system including typography, color palettes, and reusable components.", demoUrl: "https://lab03-gamma.vercel.app/", githubUrl: "https://github.com/Tdat10052499/VLU-UI-UX/tree/main/lab03" },
+  { id: "04", title: "Lab 04", desc: "Designing responsive layouts for mobile, tablet, and desktop viewports using auto-layout.", demoUrl: null, githubUrl: "https://github.com/Tdat10052499/VLU-UI-UX/tree/main/lab04" },
+  { id: "05", title: "Lab 05", desc: "Conducting usability tests on prototypes, gathering feedback, and refining the user experience.", demoUrl: "https://lab05-gamma.vercel.app/", githubUrl: "https://github.com/Tdat10052499/VLU-UI-UX/tree/main/lab05" },
+  { id: "06", title: "Lab 06", desc: "Finalizing high-fidelity screens for a complete smart agriculture web application with cinematic aesthetics.", demoUrl: "https://lab06-two.vercel.app/", githubUrl: "https://github.com/Tdat10052499/VLU-UI-UX/tree/main/lab06" }
 ];
 
-const containerVariants = {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const containerVariants: any = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
@@ -20,7 +21,8 @@ const containerVariants = {
   }
 };
 
-const itemVariants = {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const itemVariants: any = {
   hidden: { opacity: 0, y: 30 },
   show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 100, damping: 15 } }
 };
@@ -35,6 +37,19 @@ export default function Portfolio() {
       </div>
 
       <div className="relative z-10">
+        {/* HEADER / NAVBAR */}
+        <nav className="absolute top-0 left-0 w-full p-6 md:px-12 lg:px-24 flex justify-end z-50">
+          <a 
+            href="https://github.com/Tdat10052499/VLU-UI-UX" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 px-5 py-2.5 bg-white/5 backdrop-blur-md border border-white/10 rounded-full font-mono text-sm text-gray-200 hover:text-brand-crimson hover:border-brand-crimson/50 hover:bg-brand-crimson/10 hover:shadow-[0_0_20px_rgba(179,0,45,0.2)] transition-all"
+          >
+            <Code className="w-4 h-4" />
+            VLU-UI-UX
+          </a>
+        </nav>
+
         {/* HERO SECTION */}
         <section className="min-h-[90vh] flex flex-col justify-center px-6 md:px-12 lg:px-24 pt-20 pb-12">
           <motion.div
@@ -146,7 +161,7 @@ export default function Portfolio() {
                     <div className="p-6 md:p-8 flex-grow flex flex-col">
                       <div className="font-mono text-brand-gold mb-3 text-sm flex items-center gap-2">
                         <span className="w-4 h-[1px] bg-brand-gold/50"></span>
-                        Lab {lab.id}
+                        Assignment
                       </div>
 
                       <h3 className="font-serif text-xl md:text-2xl mb-4 text-gray-100 group-hover:text-white transition-colors">
@@ -157,10 +172,36 @@ export default function Portfolio() {
                         {lab.desc}
                       </p>
 
-                      <button className="flex items-center gap-2 font-mono text-sm uppercase tracking-wider text-gray-300 group-hover:text-brand-crimson transition-colors mt-auto w-fit">
-                        View Details
-                        <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
-                      </button>
+                      <div className="flex items-center gap-3 mt-auto">
+                        {lab.demoUrl ? (
+                          <a 
+                            href={lab.demoUrl} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="flex-1 flex justify-center items-center gap-2 px-3 py-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg font-mono text-xs md:text-sm text-gray-200 hover:text-brand-gold hover:border-brand-gold/50 hover:bg-brand-gold/10 hover:shadow-[0_0_15px_rgba(255,215,0,0.15)] transition-all"
+                          >
+                            <ExternalLink className="w-4 h-4" />
+                            <div className="flex items-center gap-1.5">
+                              <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span>
+                              Live Demo
+                            </div>
+                          </a>
+                        ) : (
+                          <div className="flex-1 flex justify-center items-center gap-2 px-3 py-2 bg-white/5 backdrop-blur-sm border border-white/5 rounded-lg font-mono text-xs md:text-sm text-gray-600 opacity-50 cursor-not-allowed">
+                            <ExternalLink className="w-4 h-4" />
+                            <span className="line-through decoration-gray-500">Live Demo</span>
+                          </div>
+                        )}
+                        <a 
+                          href={lab.githubUrl} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="flex-1 flex justify-center items-center gap-2 px-3 py-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg font-mono text-xs md:text-sm text-gray-200 hover:text-brand-crimson hover:border-brand-crimson/50 hover:bg-brand-crimson/10 hover:shadow-[0_0_15px_rgba(179,0,45,0.15)] transition-all"
+                        >
+                          <Code className="w-4 h-4" />
+                          Source Code
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </motion.div>

@@ -16,7 +16,7 @@ const spaceMono = Space_Mono({
 
 export const metadata: Metadata = {
   title: "Hồ Du Tuấn Đạt | UI/UX Portfolio",
-  description: "Cinematic Deep Tech UI/UX Portfolio of Hồ Du Tuấn Đạt showcasing university lab assignments.",
+  description: "Lab assignments for UI/UX Design Course at Van Lang University",
 };
 
 export default function RootLayout({

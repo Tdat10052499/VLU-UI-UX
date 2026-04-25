@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: var(--font-playfair), ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-mono: var(--font-space-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  
+  --color-brand-bg: #0f0518;
+  --color-brand-crimson: #b3002d;
+  --color-brand-crimson-hover: #e60039;
+  --color-brand-gold: #ffd700;
+  
+  --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-brand-bg);
+    color: #e5e7eb;
+    background-image: 
+      radial-gradient(circle at 15% 50%, rgba(179, 0, 45, 0.08), transparent 25%),
+      radial-gradient(circle at 85% 30%, rgba(255, 215, 0, 0.05), transparent 25%);
+    background-attachment: fixed;
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    @apply bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl shadow-[0_4px_30px_rgba(0,0,0,0.5)];
+  }
+  
+  .glass-card {
+    @apply bg-white/[0.03] backdrop-blur-sm border border-white/5 rounded-xl transition-all duration-300;
+  }
+  
+  .glass-card:hover {
+    @apply border-brand-crimson/50 shadow-[0_0_20px_rgba(179,0,45,0.2)] -translate-y-1;
+  }
+  
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-gray-100 via-gray-300 to-gray-500;
+  }
+  
+  .text-gradient-gold {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-brand-gold to-yellow-200;
+  }
+}

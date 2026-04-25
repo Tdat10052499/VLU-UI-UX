@@ -1,4 +1,4 @@
-# UI/UX Design Portfolio
+# UI/UX Design 
 
 > *"Simplicity is the ultimate sophistication."* — A minimalist approach to complex systems.
 
